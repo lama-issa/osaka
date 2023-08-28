@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root{
+    --main-Color:#ff206e;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+nav{
+    background-color: black;
+}
+.navbar-light .navbar-nav .nav-link.active{/*n bootsrape:لازم نوخذ التاغ كما هو من خلال inspect(فحص)اذا ما اخذته مفسه ما رح يغير الخاصية الي بعطي اياها لانه في البوتستراب الخاصية فيه بتكون important*/
+    color: var(--main-Color);
+}
+.p{
+    color: var(--main-Color);
+}
+.navbar-light .navbar-brand {
+    color: white ;
+    letter-spacing: 2px;/*لعمل مسافة بين الحروف*/
+    font-size: 1rem;
+    text-transform:uppercase;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white ;
+    text-transform:uppercase;
+    font-size: .875rem;/*in bootsrape:يفضل استخدام rem*/
+}
+.header-icons ul{
+    width: 50%;
+}
+.header-icons a{
+    color: white;
+}
+.header{
+background-color: black;
+color: white;
+}
+
+.header-icons ul{
+    position: absolute;
+    top: 90%;
+    width: 15%;
+}
+.effect{
+    position: relative;
+    opacity: 1;
+    animation-fill-mode:forwards ;
+    animation-delay: 1.35s;
+    animation: opacit .9s;
+
+}
+.effect::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    animation-delay: 1s;
+    animation:block 1.5s;
+
+}
+@keyframes opacit{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes block{
+    0%{
+        left: 0%;
+        width: 0%;
+    }
+    40%{
+        left: 0%;
+        width: 100%;
+    }
+    100%{
+        left: 100%;
+        width: 0%;
+    }
+}
+/*Carousel*/
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--main-Color);
+}
+.carousel-item img{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+.carousel-caption {
+    color:white;
+    bottom: -20px;
+}
+.carousel-indicators{
+    bottom: -60px;
+}
+.carousel-indicators [data-bs-target]{
+    background-color: #ff206e;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+ 
+}
+/*end Carousel*/
